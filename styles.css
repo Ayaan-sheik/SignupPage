@@ -1,0 +1,119 @@
+/* Base styles */
+body {
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #1f2937;
+}
+
+.image-container {
+    background-color: #047857;
+    width: 40vw;
+    min-height: 100vh;
+}
+
+.signup-container {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.signup h1 {
+    color: white;
+    background-color: transparent;
+    padding: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Modified: Input row styling */
+.input-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.input-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #475569;
+    padding: 0.5rem 0;
+    color: #e2e8f0;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+input:focus {
+    outline: none;
+    border-bottom-color: #94a3b8;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.75rem;
+    min-height: 1rem;
+}
+
+/* Hide number input spinners (present in number input)*/ 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .image-container {
+        width: 100%;
+        min-height: 200px;
+    }
+    
+    .signup-container {
+        padding: 1rem;
+    }
+    
+    /* Modified: Mobile layout for input rows */
+    .input-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="/api/placeholder/800/1200" alt="Decorative background">
+    </div>
+    <div class="signup-container">
+        <div class="signup">
+            <h1>Get started</h1>
+            <div>
+                <form>
+                    <!-- Name Fields -->
+                    <div class="input-row">
+                        <div class="input-container">
+                            <label for="first-name">First Name</label>
+                            <input 
+                                type="text" 
+                                id="first-name" 
+                                name="first-name" 
+                                placeholder="First Name"
+                                required
+                            >
+                        </div>
+                        <div class="input-container">
+                            <label for="last-name">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="last-name" 
+                                name="last-name" 
+                                placeholder="Last Name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Contact Fields -->
+                    <div class="input-row">
+                        <div class="input-container">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="example@company.com"
+                                required
+                            >
+                            <div class="error">*Please provide a valid email</div>
+                        </div>
+                        <div class="input-container">
+                            <label for="phone">Phone</label>
+                            <input 
+                                type="number" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="Phone Number"
+                                required
+                            >
+                            <div class="error">*Please enter valid number</div>
+                        </div>
+                    </div>
+
+                    <!-- Password Fields -->
+                    <div class="input-row">
+                        <div class="input-container">
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Create a password"
+                                required
+                                minlength="8"
+                            >
+                            <div class="error">*Password requires minimum 8 characters</div>
+                        </div>
+                        <div class="input-container">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input 
+                                type="password" 
+                                id="confirm-password" 
+                                name="confirm-password" 
+                                placeholder="Confirm your password"
+                                required
+                            >
+                            <div class="error">*Passwords do not match</div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div>
+                        <button type="submit" 
+                            style="background-color: #10b981; color: white; padding: 1rem 2rem; 
+                                   border: none; border-radius: 4px; cursor: pointer; 
+                                   font-size: 1rem; width: 100%;">
+                            Create Account
+                        </button>
+                    </div>
+
+                    <!-- Login Link -->
+                    <div style="text-align: center; color: #94a3b8;">
+                        Already have an account? 
+                        <a href="#" style="color: #10b981; text-decoration: none;">Log in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
