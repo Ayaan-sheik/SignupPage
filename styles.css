@@ -144,6 +144,9 @@ input:focus {
     min-height: 1rem;
 }
 
+
+
+
 /* Hide number input spinners (present in number input)*/ 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

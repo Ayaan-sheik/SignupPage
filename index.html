@@ -40,6 +40,7 @@
                                 name="first-name" 
                                 placeholder="First Name"
                                 required
+                                pattern="[a-zA-Z]"
                             >
                         </div>
                         <div class="input-container">
@@ -50,13 +51,14 @@
                                 name="last-name" 
                                 placeholder="Last Name"
                                 required
+                                pattern="[a-zA-Z]"
                             >
                         </div>
                     </div>
 
                     <!-- Contact Fields -->
-                    <div class="input-row">
-                        <div class="input-container">
+                    <div class="input-row" >
+                        <div class="input-container" onclick="ValidateEmail()">
                             <label for="email">Email</label>
                             <input 
                                 type="email" 
@@ -64,10 +66,11 @@
                                 name="email" 
                                 placeholder="example@company.com"
                                 required
+                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}"
                             >
                             <div class="error">*Please provide a valid email</div>
                         </div>
-                        <div class="input-container">
+                        <div class="input-container" onclick="ValidatePhone()">
                             <label for="phone">Phone</label>
                             <input 
                                 type="number" 
@@ -75,6 +78,7 @@
                                 name="phone" 
                                 placeholder="Phone Number"
                                 required
+                                pattern="[6-9]\d{9}"
                             >
                             <div class="error">*Please enter valid number</div>
                         </div>
@@ -82,7 +86,7 @@
 
                     <!-- Password Fields -->
                     <div class="input-row">
-                        <div class="input-container">
+                        <div class="input-container" onclick="Validatepasswordsize()">
                             <label for="password">Password</label>
                             <input 
                                 type="password" 
@@ -90,11 +94,12 @@
                                 name="password" 
                                 placeholder="Create a password"
                                 required
-                                minlength="8"
+                                minlength="8";
+                                pattern=".{8,}"
                             >
                             <div class="error">*Password requires minimum 8 characters</div>
                         </div>
-                        <div class="input-container">
+                        <div class="input-container" onclick="ValidatePassword()">
                             <label for="confirm-password">Confirm Password</label>
                             <input 
                                 type="password" 
@@ -126,5 +131,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
